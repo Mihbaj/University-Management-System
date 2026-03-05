@@ -40,7 +40,12 @@ public class Main {
                 case 1-> {
                     System.out.println("Enter the Department Name: ");
                     department.depatmentName = sc.nextLine();
-                    department.addDepartmet();
+                    try{
+                        department.addDepartmet();
+                    }
+                    catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
                 }
                 case 2 -> {
                     System.out.print("Enter the ID: ");

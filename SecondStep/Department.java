@@ -22,16 +22,10 @@ public class Department {
          
 
     }
-    public void addDepartmet(){
+    public void addDepartmet() throws Exception{
         for (String name : departmentList) {
-            try{
-                if(name.equals(depatmentName)){
-                    throw new Exception("The department name is already added");
-                }
-            }
-            catch (Exception e) {
-                System.out.println(e.getMessage());
-                return;
+            if(name.equals(depatmentName)){
+                throw new Exception("The department name is already added");
             }
         }
         
