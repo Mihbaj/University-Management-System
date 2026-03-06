@@ -8,6 +8,7 @@ public class Department {
     List<String> departmentList = new ArrayList<>();
     List<Student> studentList = new ArrayList<>();
     
+    
 
     public void addStudent(Student student){
         for (Student s : studentList){
@@ -30,6 +31,18 @@ public class Department {
         }
         
         departmentList.add(depatmentName);
+
+    }
+    public void addCourse(Course course) {
+        for (Course c: Course.courseList){
+            if(c.courseId == course.courseId){
+                System.out.println("This ID is already added!");
+
+            }
+
+        }
+        Course.courseList.add(course);
+
 
     }
     

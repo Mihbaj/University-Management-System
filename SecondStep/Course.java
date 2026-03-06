@@ -7,6 +7,12 @@ public class Course {
     String courseName;
     List<Student> enrolledStuents;
     static List<Course> courseList = new ArrayList<>();
+    public Course(int courseId, String courseName){
+        this.courseId = courseId;
+        this.courseName = courseName;
+
+    }
+    
 
     
 

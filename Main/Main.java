@@ -64,6 +64,17 @@ public class Main {
                  
 
                 }
+                case 3 -> {
+                    System.out.print("Enter the coures ID: ");
+                    int id = sc.nextInt();
+                    System.out.print("Enter the Courese Name:  ");
+                    sc.nextLine();
+                    String  courseName = sc.nextLine();
+                    Course course = new Course(id, courseName);
+                    department.addCourse(course);
+
+                
+                }
             }
         }
             
