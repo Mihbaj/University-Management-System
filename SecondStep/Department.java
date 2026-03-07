@@ -9,6 +9,7 @@ public class Department {
     List<Student> studentList = new ArrayList<>();
     
     
+    
 
     public void addStudent(Student student){
         for (Student s : studentList){
@@ -44,6 +45,15 @@ public class Department {
         Course.courseList.add(course);
 
 
+    }
+    public void addProfessior(Professor professior){
+        for(Professor pro: Professor.professorList  ){
+            if(pro.getId() == professior.getId()){
+                System.out.println("This id is alredy added!");
+                return;
+            }
+        }
+        Professor.professorList.add(professior);
     }
     
 }

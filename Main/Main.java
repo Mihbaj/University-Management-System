@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args){
         System.out.println("-------University Management System -------");
         System.out.println("1.Add Department");
-        System.out.println("2.Add Coures");
-        System.out.println("3.Add Professor");
-        System.out.println("4.Add Student");
+        System.out.println("2.Add Student");
+        System.out.println("3.Add Course");
+        System.out.println("4.Add Professior");
         System.out.println("5.Enroll Student in Cours");
         System.out.println("6.Assign Grade");
         System.out.println("7.View Student Grades");
@@ -18,6 +18,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         Department department = new Department();
+        
         while (true) {
             System.out.print("Enter your choice: ");
             
@@ -74,6 +75,18 @@ public class Main {
                     department.addCourse(course);
 
                 
+                }
+                case 4 ->{
+                    System.out.print("Enter the professior ID: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter the Professior name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter the Email: ");
+                    String email = sc.nextLine();
+                    Professor professior = new Professor(id,name,email);
+                    department.addProfessior(professior);
+
                 }
             }
         }
